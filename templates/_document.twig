@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html class="html {{ body_class }}" lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }} {{ __('Feed', 'flynt') }}" href="{{ site.rss2 | e('esc_url') }}">
+    {{ function('wp_head') }}
+  </head>
+  <body>
+    <a href="#mainContent" class="skipLink">
+      {{ __("Skip to main content", "flynt") }}
+    </a>
+    {% block layout %}
+      <div class="pageWrapper">
+        <header class="mainHeader">
+          {% block header %}
+            {{ renderComponent('NavigationMain') }}
+            {{ renderComponent('NavigationBurger') }}
+          {% endblock %}
+        </header>
+        <main id="mainContent" class="mainContent" aria-label="{{ __('Content', 'flynt') }}">
+          {% if function('post_password_required') %}
+            {{ function('get_the_password_form') }}
+          {% else %}
+            {% block content %}
+              No <code>{{ '{% block content %}' }}</code> defined for this template.
+            {% endblock %}
+          {% endif %}
+        </main>
+        {# <footer class="mainFooter">
+          {% block footer %}
+            {{ renderComponent('NavigationFooter') }}
+          {% endblock %}
+        </footer> #}
+        <footer class="mainFooter">
+          <aside>
+            {% block sidebar %}
+            <div class="flyntComponent componentSpacing " is="flynt-list-components">
+              <div class="container centerMaxWidthContainer">
+                <ul class="components">
+                  <li class="component boxShadow">
+                     {{dynamic_sidebar1}}
+                  </li>
+                  <li class="component boxShadow">
+                    {# <h3>Newsletter Sign Up</h3> #}
+                    {{dynamic_sidebar2}}
+                  </li>
+                  <li class="component boxShadow" style="padding:15px;">
+                    {{dynamic_sidebar3}}
+                  </li>
+                </ul>
+              </div>
+            </div>
+            {% endblock %}
+            <div class="container centerMaxWidthContainer copyRightContainer">
+            © 2021, The Sky Residences W Aspen. All Rights Reserved.
+
+The Sky Residences at W Aspen are not owned, developed, or sold by Marriott International, Inc., W Hotel Management, Inc., or their affiliates. Aspen Club Lodge Properties, LLC uses the W Hotels® trademarks and trade names under a license from Marriott International, Inc. or its affiliates. If this license is terminated or expires without renewal, the residential project will no longer be associated with, or have any right to use, the W Hotels brand, trade names or trademarks. 
+            </div> 
+          </aside>
+          {% block footer %}
+          {{ renderComponent('NavigationFooter') }}
+          {% endblock %}
+        </footer>
+      </div>
+    {% endblock %}
+    <div class="wpFooter">
+      {{ function('wp_footer') }}
+    </div>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<nav is="flynt-navigation-main" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
+  <div class="wrapper">
+    <div class="container rightMaxWidthContainer">
+      <a class="w-logo" href="{{ site.link }}">
+        <img class="w-logo-image" src="{{ logo.src }}" style="visibility:hidden;">
+      </a>
+      {% if menu %}
+        <ul class="menu">
+          {% for item in menu.items %}
+            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
+              <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>{{ item.title }}</a>
+            </li>
+          {% endfor %}
+          <li class="menu-item email-item">
+            <a class="menu-link" href="#" class="email-icon"><i class="fa fa-envelope"></i></a>
+          </li>
+          <li class="menu-item phone-item">
+            <a class="menu-link" href="#" class="phone-icon"><i class="fa fa-phone"></i></a>
+          </li>
+        </ul>
+      {% endif %}
+    </div>
+    <div class="logo-container">
+      <a class="w-logo" href="{{ site.link }}">
+        <img class="logo-image" src="{{ logo.src }}" alt="{{ logo.alt }}">
+      </a>
+      </div>
+  </div>
+</nav>
