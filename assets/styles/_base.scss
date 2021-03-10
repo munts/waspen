@@ -201,6 +201,13 @@ ol {
   }
 }
 
+.video-overlay {
+  display: block;
+  left: 15%;
+  position: absolute;
+  top: 30%;
+}
+
 .title-text {
   color: $color-background-accent;
 }
@@ -214,17 +221,15 @@ ol {
 }
 
 .w-button {
-  background-color: $color-background-accent;
-  padding: 10px 25px;
-  text-align: center;
+  padding: 10px 0;
   transform: skewX(-18deg);
-  //width: 156px;
 
   &-inner {
     transform: skewX(18deg);
   }
 
   &-skew-button {
+    background-color: $color-background-accent;
     color: $color-accent;
     padding: 10px 25px;
     text-align: center;
@@ -233,12 +238,13 @@ ol {
   }
 }
 
-.w-button a {
+.w-button li a {
   transform: skewX(18deg);
 }
 
 .skew-text {
   color: #000;
+  display: inline-block;
   transform: skewX(18deg);
 }
 
