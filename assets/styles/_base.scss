@@ -201,9 +201,15 @@ ol {
   }
 }
 
-.nav_menu-2 ul li a {
-  color: #333;
+.nav_menu-2 {
+  margin-left: 30px;
+
+  ul li a {
+    color: #333;
+  }
 }
+
+
 
 .video-overlay {
   display: block;
@@ -273,6 +279,8 @@ ol {
     padding-left: 0;
   }
 }
+
+
 
 /* Icon Lists */
 
