@@ -4,7 +4,9 @@
     <div class="content">
       {{ contentHtml|e('wp_kses_post') }}
     </div>
-    <button type="button" class="button button--small" aria-label="Close" data-close>{{ closeButtonLabel|e }}</button>
+    <div class="w-button">
+      <a href="#" role="button" class="w-button-skew-button" aria-label="Close" data-close><span class="skew-text">{{ closeButtonLabel|e }}</span></a>
+    </div>
   </div>
 </div>
 {% endif %}
