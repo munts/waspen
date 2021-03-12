@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import 'core-js/es/number'
-import Swiper, { Navigation, A11y, Autoplay, Pagination } from 'swiper/swiper.esm'
+import Swiper, { Navigation, A11y, Pagination } from 'swiper/swiper.esm'
 import 'swiper/swiper-bundle.css'
 
 Swiper.use([Navigation, A11y, Pagination])
@@ -38,9 +38,9 @@ class SliderEmbedsCentered extends window.HTMLDivElement {
   }
 
   initSlider () {
-    //const { options } = this.props
+    // const { options } = this.props
     const config = {
-      //a11y: options.a11y,
+      // a11y: options.a11y,
       centeredSlides: true,
       loop: true,
       navigation: {
