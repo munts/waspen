@@ -21,6 +21,7 @@
         {% endif %}
       </figure>
     </div>
+    {% if image2 %}
     <div class="box-inner box-inner--image2" style="width:100%;height:450px;margin-top:15px;">
       <figure class="figure">
         <img class="figure-image lazyload"
@@ -41,9 +42,11 @@
         {% endif %}
       </figure>
     </div>
+    {% endif %}
     </div>
     <div class="box-inner box-inner--content">
       <div class="box-contentWrapper">
+      {% if imageTop %}
       <figure class="figure2">
         <img class="figure-image lazyload"
           src="{{ imageTop.src|resizeDynamic(1280) }}"
@@ -62,6 +65,7 @@
           <figcaption class="figure-caption">{{ imageTop.caption|e }}</figcaption>
         {% endif %}
       </figure>
+      {% endif %}
         {{ contentHtml|e('wp_kses_post') }}
       </div>
     </div>
