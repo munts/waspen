@@ -1,6 +1,7 @@
 <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-text-image-crop" >
   <div class="box box--{{ imagePosition }}">
-    <div class="box-inner box-inner--image">
+  <div class="gallery" style="width:45%">
+    <div class="box-inner box-inner--image" style="width:100%;height:450px;">
       <figure class="figure">
         <img class="figure-image lazyload"
           src="{{ image.src|resizeDynamic(1280) }}"
@@ -20,8 +21,47 @@
         {% endif %}
       </figure>
     </div>
+    <div class="box-inner box-inner--image2" style="width:100%;height:450px;margin-top:15px;">
+      <figure class="figure">
+        <img class="figure-image lazyload"
+          src="{{ image2.src|resizeDynamic(1280) }}"
+          srcset="{{ placeholderImage(1280, 1280 / image2.aspect) }}"
+          data-aspectratio="{{ image2.aspect }}"
+          data-srcset="
+            {{ image2.src|resizeDynamic(1920) }} 1920w,
+            {{ image2.src|resizeDynamic(1440) }} 1440w,
+            {{ image2.src|resizeDynamic(1280) }} 1280w,
+            {{ image2.src|resizeDynamic(1024) }} 1024w,
+            {{ image2.src|resizeDynamic(768) }} 768w,
+            {{ image2.src|resizeDynamic(375) }} 375w"
+          data-sizes="auto"
+          alt="{{ image2.alt|e }}">
+        {% if image2.caption %}
+          <figcaption class="figure-caption">{{ image2.caption|e }}</figcaption>
+        {% endif %}
+      </figure>
+    </div>
+    </div>
     <div class="box-inner box-inner--content">
       <div class="box-contentWrapper">
+      <figure class="figure2">
+        <img class="figure-image lazyload"
+          src="{{ imageTop.src|resizeDynamic(1280) }}"
+          srcset="{{ placeholderImage(1280, 1280 / imageTop.aspect) }}"
+          data-aspectratio="{{ imageTop.aspect }}"
+          data-srcset="
+            {{ imageTop.src|resizeDynamic(1920) }} 1920w,
+            {{ imageTop.src|resizeDynamic(1440) }} 1440w,
+            {{ imageTop.src|resizeDynamic(1280) }} 1280w,
+            {{ imageTop.src|resizeDynamic(1024) }} 1024w,
+            {{ imageTop.src|resizeDynamic(768) }} 768w,
+            {{ imageTop.src|resizeDynamic(375) }} 375w"
+          data-sizes="auto"
+          alt="{{ imageTop.alt|e }}">
+        {% if imageTop.caption %}
+          <figcaption class="figure-caption">{{ imageTop.caption|e }}</figcaption>
+        {% endif %}
+      </figure>
         {{ contentHtml|e('wp_kses_post') }}
       </div>
     </div>

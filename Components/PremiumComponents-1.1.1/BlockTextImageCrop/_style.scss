@@ -23,6 +23,14 @@
         }
       }
 
+      &--image2 {
+        position: relative;
+
+        @media (min-width: $breakpoint-tablet) {
+          width: 45%;
+        }
+      }
+
       &--content {
         padding: $gutter-width $container-padding-mobile;
 
@@ -71,6 +79,32 @@
       right: 0;
       top: 0;
     }
+
+    &-image {
+      font-family: 'object-fit: cover';
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 50%;
+      width: 100%;
+    }
+
+    &-caption {
+      padding: 0 $container-padding-mobile;
+    }
+  }
+
+  .figure2 {
+    margin: 0;
+    position: relative;
+    right: -100px;
+
+    // @media (min-width: $breakpoint-tablet) {
+    //   bottom: 0;
+    //   left: 0;
+    //   position: absolute;
+    //   right: 0;
+    //   top: 0;
+    // }
 
     &-image {
       font-family: 'object-fit: cover';
