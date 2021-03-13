@@ -47,6 +47,23 @@
           padding: $container-padding-desktop ($container-padding-desktop * 2);
         }
       }
+
+      &--content2 {
+        padding: 0 20px;
+
+        @media (min-width: $breakpoint-tablet) {
+          padding: 0 20px;
+          width: 55%;
+        }
+
+        @media (min-width: $breakpoint-tablet-horizontal) {
+          padding: 0 20px;
+        }
+
+        @media (min-width: $breakpoint-desktop) {
+          padding: 0 20px;
+        }
+      }
     }
 
     &-contentWrapper {
@@ -106,7 +123,7 @@
   .figure2 {
     margin: 0;
     position: relative;
-    right: -100px;
+    // right: -100px;
 
     // @media (min-width: $breakpoint-tablet) {
     //   bottom: 0;

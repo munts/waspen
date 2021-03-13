@@ -1,7 +1,8 @@
+{% if fn('is_page', 2) %}
 <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-text-image-crop" >
   <div class="box box--{{ imagePosition }}">
   <div class="gallery" style="width:45%">
-    <div class="box-inner box-inner--image" style="width:100%;height:450px;">
+    <div class="box-inner box-inner--image" style="width:100%;height:550px;">
       <figure class="figure">
         <img class="figure-image lazyload"
           src="{{ image.src|resizeDynamic(1280) }}"
@@ -22,7 +23,7 @@
       </figure>
     </div>
     {% if image2 %}
-    <div class="box-inner box-inner--image2" style="width:100%;height:450px;margin-top:15px;">
+    <div class="box-inner box-inner--image2" style="width:100%;height:550px;margin-top:15px;">
       <figure class="figure">
         <img class="figure-image lazyload"
           src="{{ image2.src|resizeDynamic(1280) }}"
@@ -71,3 +72,78 @@
     </div>
   </div>
 </div>
+{% else %}
+<div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-block-text-image-crop" >
+  <div class="box box--{{ imagePosition }}">
+  <div class="gallery" style="width:45%">
+    <div class="box-inner box-inner--image" style="width:100%;height:550px;">
+      <figure class="figure">
+        <img class="figure-image lazyload"
+          src="{{ image.src|resizeDynamic(1280) }}"
+          srcset="{{ placeholderImage(1280, 1280 / image.aspect) }}"
+          data-aspectratio="{{ image.aspect }}"
+          data-srcset="
+            {{ image.src|resizeDynamic(1920) }} 1920w,
+            {{ image.src|resizeDynamic(1440) }} 1440w,
+            {{ image.src|resizeDynamic(1280) }} 1280w,
+            {{ image.src|resizeDynamic(1024) }} 1024w,
+            {{ image.src|resizeDynamic(768) }} 768w,
+            {{ image.src|resizeDynamic(375) }} 375w"
+          data-sizes="auto"
+          alt="{{ image.alt|e }}">
+        {% if image.caption %}
+          <figcaption class="figure-caption">{{ image.caption|e }}</figcaption>
+        {% endif %}
+      </figure>
+    </div>
+    {% if image2 %}
+    <div class="box-inner box-inner--image2" style="width:100%;height:550px;margin-top:15px;">
+      <figure class="figure">
+        <img class="figure-image lazyload"
+          src="{{ image2.src|resizeDynamic(1280) }}"
+          srcset="{{ placeholderImage(1280, 1280 / image2.aspect) }}"
+          data-aspectratio="{{ image2.aspect }}"
+          data-srcset="
+            {{ image2.src|resizeDynamic(1920) }} 1920w,
+            {{ image2.src|resizeDynamic(1440) }} 1440w,
+            {{ image2.src|resizeDynamic(1280) }} 1280w,
+            {{ image2.src|resizeDynamic(1024) }} 1024w,
+            {{ image2.src|resizeDynamic(768) }} 768w,
+            {{ image2.src|resizeDynamic(375) }} 375w"
+          data-sizes="auto"
+          alt="{{ image2.alt|e }}">
+        {% if image2.caption %}
+          <figcaption class="figure-caption">{{ image2.caption|e }}</figcaption>
+        {% endif %}
+      </figure>
+    </div>
+    {% endif %}
+    </div>
+    <div class="box-inner box-inner--content2">
+      <div class="box-contentWrapper">
+      {% if imageTop %}
+      <figure class="figure2">
+        <img class="figure-image lazyload"
+          src="{{ imageTop.src|resizeDynamic(1280) }}"
+          srcset="{{ placeholderImage(1280, 1280 / imageTop.aspect) }}"
+          data-aspectratio="{{ imageTop.aspect }}"
+          data-srcset="
+            {{ imageTop.src|resizeDynamic(1920) }} 1920w,
+            {{ imageTop.src|resizeDynamic(1440) }} 1440w,
+            {{ imageTop.src|resizeDynamic(1280) }} 1280w,
+            {{ imageTop.src|resizeDynamic(1024) }} 1024w,
+            {{ imageTop.src|resizeDynamic(768) }} 768w,
+            {{ imageTop.src|resizeDynamic(375) }} 375w"
+          data-sizes="auto"
+          alt="{{ imageTop.alt|e }}">
+        {% if imageTop.caption %}
+          <figcaption class="figure-caption">{{ imageTop.caption|e }}</figcaption>
+        {% endif %}
+      </figure>
+      {% endif %}
+        {{ contentHtml|e('wp_kses_post') }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
