@@ -5,7 +5,7 @@
   height: 100%; /* Full height */
   left: 0;
   //opacity: 0;
-  overflow: auto; /* Enable scroll if needed */
+  overflow: scroll; /* Enable scroll if needed */
   padding-top: 100px; /* Location of the box */
   position: fixed; /* Stay in place */
   top: 0;
@@ -18,7 +18,7 @@
     border: 1px solid #888;
     height: 85%;
     margin: auto;
-    padding: 10px;
+    padding: 15px;
     width: 95%;
   }
 
