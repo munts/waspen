@@ -32,6 +32,22 @@ $(document).ready(function () {
   feather.replace({
     'stroke-width': 1
   })
+
+  $('.modal-trigger').on('click', function (e) {
+    e.preventDefault()
+    var md = $(this).data('modal')
+    var mc = '#modal-' + md
+    var m = $(mc)
+    m.fadeIn()
+    return false
+  })
+
+  $('.close').on('click', function (e) {
+    e.preventDefault()
+    var m = $(this).parents('.modal')
+    m.fadeOut()
+    return false
+  })
 })
 
 $(document).ready(function () {
