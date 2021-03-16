@@ -6,11 +6,11 @@
   left: 0;
   //opacity: 0;
   overflow: scroll; /* Enable scroll if needed */
-  padding-top: 40px; /* Location of the box */
+  padding-top: 35px; /* Location of the box */
   position: fixed; /* Stay in place */
   top: 0;
   width: 100%; /* Full width */
-  z-index: 1; /* Sit on top */
+  z-index: 25; /* Sit on top */
 
   /* Modal Content */
   .content {
@@ -19,6 +19,7 @@
     font-size: 0.84em;
     height: 85%;
     margin: auto;
+    overflow: scroll;
     padding: 10px 15px;
     width: 96%;
   }
