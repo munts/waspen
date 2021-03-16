@@ -50,10 +50,10 @@ $(document).ready(function () {
   })
 })
 
-$(document).ready(function () {
-  var cf7submit = document.querySelector('div.w-button-submit')
-  cf7submit.insertAdjacentHTML('afterbegin', '<button type="submit" value="Submit" class="wpcf7-form-control button wpcf7-submit"><span class="skew-text">Submit</span></button>')
-})
+// $(document).ready(function () {
+// var cf7submit = document.querySelector('div.w-button-submit')
+// cf7submit.insertAdjacentHTML('afterbegin', '<button type="submit" value="Submit" class="wpcf7-form-control button wpcf7-submit"><span class="skew-text">Submit</span></button>')
+// })
 
 installCE(window, {
   type: 'force',
