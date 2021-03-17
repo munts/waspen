@@ -5,7 +5,7 @@
         {{ contentHtml|e('wp_kses_post') }}
       </div>
       {% if gmaps %}
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAw7_dT-EL15DkqRQg_TnGDml0nab-yIo&callback=initMap" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSypNhQTAdXM5ua2lx93n2Cwso-Rgra4w&callback=initMap" defer></script>
     <script type="text/javascript"> 
 
     // Initialize and add the map
@@ -27,7 +27,7 @@
         const marker = new google.maps.Marker({
             position: uluru,
             map: map,
-            title: "The Sitzmark Lodge Vail, Colorado",
+            title: "The W Residences Aspen",
         });
 
         const contentString = '<div style="font-weight:bold;font-size:16px;padding:10px;">{{gmaps.address}}</div>' + '<div style="font-weight:bold;font-size:16px;padding:10px;">{{markerInfo}}</div>';
