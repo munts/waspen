@@ -7,20 +7,6 @@
   </div>
 </div> #}
 
-<style>
-    video.fullscreen {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        min-width: 100%;
-        min-height: 100%;
-        width: auto;
-        height: auto;
-        z-index: -100;
-        transform: translate(-50%, -50%);
-    }
-</style>
-
 <link href="https://unpkg.com/cloudinary-video-player@1.5.1/dist/cld-video-player.min.css" rel="stylesheet">
 <script src="https://unpkg.com/cloudinary-core@latest/cloudinary-core-shrinkwrap.min.js" type="text/javascript"></script>
 <script src="https://unpkg.com/cloudinary-video-player@1.5.1/dist/cld-video-player.min.js" 
@@ -36,20 +22,9 @@
     data-cld-autoplay-mode="always"
   >
 </video>
-<div class="video-overlay">
-  <h1 style="color: #fff">EXPERIENCE ASPEN,<br> PERFECTED</h1>
-  <div style="color:#fff; font-weight:bold;display:block;padding-bottom:15px;">
-    11 Unique W-branded Residences
-  </div>
-  <div class="w-button">
-    <a class="w-button-skew-button" role="button" href="https://wresidencesaspen.com/connect/" target="_self">
-      <span class="skew-text">INQUIRE TODAY</span>
-    </a>
-  </div>
-</div>
 
 <script>
 var cld = cloudinary.Cloudinary.new({ cloud_name: 'demo' });
   var player = cld.videoPlayer('player');
-player.source('https://res.cloudinary.com/knsmunts/video/upload/v1615247884/W_ASPEN_Updated_1_sx2rof.mp4');
+player.source('{{ video }}');
 </script>

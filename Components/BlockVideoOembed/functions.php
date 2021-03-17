@@ -3,18 +3,18 @@
 namespace Flynt\Components\BlockVideoOembed;
 
 use Flynt\FieldVariables;
-use Flynt\Utils\Oembed;
+// use Flynt\Utils\Oembed;
 
-add_filter('Flynt/addComponentData?name=BlockVideoOembed', function ($data) {
-    $data['video'] = Oembed::setSrcAsDataAttribute(
-        $data['oembed'],
-        [
-            'autoplay' => 'true'
-        ]
-    );
+// add_filter('Flynt/addComponentData?name=BlockVideoOembed', function ($data) {
+//     $data['video'] = Oembed::setSrcAsDataAttribute(
+//         $data['oembed'],
+//         [
+//             'autoplay' => 'true'
+//         ]
+//     );
 
-    return $data;
-});
+//     return $data;
+// });
 
 function getACFLayout()
 {
@@ -40,9 +40,17 @@ function getACFLayout()
             ],
             [
                 'label' => __('Video', 'flynt'),
-                'name' => 'oembed',
-                'type' => 'oembed',
+                'name' => 'video',
+                'type' => 'text',
                 'required' => 1
+            ],
+            [
+                'label' => __('Overlay Content', 'flynt'),
+                'name' => 'overlayContent',
+                'type' => 'wysiwyg',
+                'delay' => 1,
+                'media_upload' => 0,
+                'required' => 1,
             ],
             [
                 'label' => __('Options', 'flynt'),
