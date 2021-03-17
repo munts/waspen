@@ -222,12 +222,11 @@ ol {
   color: $color-background-accent;
 }
 
-.w-button-connect {
-  width: 250px;
-}
-
-.w-button-explore {
-  width: 330px;
+@media only screen and (min-width: 641px) {
+  .gform_button {
+    background-color: $color-background-accent !important;
+    color: $color-accent;
+  }
 }
 
 .w-button {
