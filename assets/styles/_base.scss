@@ -239,7 +239,11 @@ video .fullscreen {
   }
 
   .padding-top {
-    padding-top: 100px;
+    padding-top: 100px !important;
+  }
+
+  .padding-top-x-2 {
+    padding-top: 200px !important;;
   }
 }
 
