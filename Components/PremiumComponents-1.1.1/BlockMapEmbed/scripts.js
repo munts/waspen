@@ -1,5 +1,5 @@
 // import $ from 'jquery'
-// import google from 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAAw7_dT-EL15DkqRQg_TnGDml0nab-yIo'
+// import google from 'https://maps.googleapis.com/maps/api/js?key='
 
 // class BlockMapEmbed extends window.HTMLDivElement {
 //   constructor (...args) {
