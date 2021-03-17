@@ -4,14 +4,15 @@
       <div class="content">
         {{ contentHtml|e('wp_kses_post') }}
       </div>
-      {% if gmaps %}
+      {# {% if gmaps %} #}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSypNhQTAdXM5ua2lx93n2Cwso-Rgra4w&callback=initMap" defer></script>
     <script type="text/javascript"> 
 
     // Initialize and add the map
     function initMap() {
         // The location of Uluru
-        const uluru = { lat: {{gmaps.lat}}, lng: {{gmaps.lng}} };
+        // const uluru = { lat: {{gmaps.lat}}, lng: {{gmaps.lng}} };
+        const uluru = { lat: 39.186530, lng: -106.816860 };
         // The map, centered at Uluru
         const map = new google.maps.Map(document.getElementById("myMap"), {
             zoom: 14,
@@ -43,7 +44,7 @@
     }
 
     </script>
-{% endif %}
+{# {% endif %} #}
     </div>
   </div>
   <div id="myMap" class="acf-map" style="width:100%; height:500px;"></div>
