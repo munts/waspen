@@ -20,6 +20,15 @@ function getACFLayout()
                 'instructions' => __('The content overlaying the image. Character Recommendations: Title: 30-100, Content: 80-250.', 'flynt'),
             ],
             [
+                'label' => __('Google Maps Api Key', 'flynt'),
+                'name' => 'googleMapsApiKey',
+                'type' => 'text',
+                'maxlength' => 100,
+                'prepend' => '',
+                'append' => '',
+                'placeholder' => ''
+            ],
+            [
                 'label' => 'Gmaps Fields',
                 'name' => 'gmaps',
                 'type' => 'google_map',
