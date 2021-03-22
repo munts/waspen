@@ -1,5 +1,10 @@
 <nav is="flynt-navigation-burger" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="container centerMaxWidthContainer">
+    <ul class="menu2" style="list-style: none;">
+      <li class="menu-item phone-item" style="display:inline-block;">
+        <a class="menu-link-mobile" href="tel:970-400-1110" class="phone-icon"><i class="fa fa-phone"></i><br>Call Now</a>
+      </li>
+    </ul>
     {% include 'Partials/_logo.twig' with { 'logo': logo, 'site': site } only %}
     {% if menu %}
       {% include 'Partials/_hamburger.twig' with { 'a11y': a11y } only %}
