@@ -777,8 +777,10 @@ select {
 
 /* Class for text that should only be visible to screen readers */
 
-.hideOnMobile {
-  display: None;
+@media (max-width:768px) {
+  .hideOnMobile {
+    display: None;
+  }
 }
 
 .visuallyHidden {
