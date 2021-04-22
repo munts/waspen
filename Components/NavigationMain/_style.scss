@@ -104,7 +104,10 @@
     }
 
     &-item {
-      margin: 0 10px;
+      @media (min-width: 1130px) {
+        margin: 0 10px;
+      }
+      
 
       &:hover {
         background-color: $color-background-accent;
