@@ -119,10 +119,15 @@
     }
     
     &-item-408 {
-      background-color: $color-background-accent;
-      margin-right: 120px;
-      padding: 30px 15px;
-      transform: skewX(-18deg);
+      display: none;
+
+      @media (min-width: $breakpoint-mobile-horizontal) {
+        background-color: $color-background-accent;
+        display: inline-block;
+        margin-right: 120px;
+        padding: 30px 15px;
+        transform: skewX(-18deg);
+      }
     }
 
     &-item-408 a {
