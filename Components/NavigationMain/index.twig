@@ -7,7 +7,7 @@
       {% if menu %}
         <ul class="menu">
           {% for item in menu.items %}
-            <li class="menu-item {{ item.current ? 'menu-item--current' }}">
+            <li class="{{ item.classes|join(' ') }}{{ item.current ? 'menu-item--current' }}">
               <a class="menu-link" href="{{ item.link }}" {{ item.target == '_blank' ? 'target="_blank" rel="noopener noreferrer"' }}>{{ item.title }}</a>
             </li>
           {% endfor %}

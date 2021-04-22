@@ -90,6 +90,13 @@ function getACFFields()
             'endpoint' => 0
         ],
         [
+            'label' => __('Form Name/ID', 'flynt'),
+            'name' => 'formName',
+            'type' => 'text',
+            'delay' => 1,
+            'instructions' => __('Best to name the form all lowercase and without spaces and or use hyphens.  ex: contact-us', 'flynt'),
+        ],
+        [
             'label' => __('Title', 'flynt'),
             'name' => 'preContentHtml',
             'type' => 'wysiwyg',
