@@ -778,6 +778,9 @@ select {
 }
 
 /* Class for text that should only be visible to screen readers */
+.hide {
+  display: none;
+}
 
 @media (max-width:768px) {
   .hideOnMobile {
